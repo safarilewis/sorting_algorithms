@@ -22,14 +22,15 @@ void swap(int *i, int *j)
 */
 
 void bubble_sort(int *array, size_t size){
+    int n = size - 1;
     int i;
     int j;
 
     //Loop to access each array element
-    for (i = 0;i < size - 1;i++)
+    for (i = 0;i < n;i++)
     {
         //Loop to compare array elements
-        for (j = 0;j < size - i - 1;j++){
+        for (j = 0;j < n-i;j++){
             if (array[j] > array[j + 1])
                 swap(array + j, array + j + 1);
                 print_array(array, size);
